@@ -14,8 +14,8 @@ function MovieForm({addMovie}) {
     };
 
     const resetErrors = () => {
-        setMovieTitle("");
-        setMovieYear("");
+        setTitleError("");
+        setYearError("");
     };
 
     const validateForm = () => {
