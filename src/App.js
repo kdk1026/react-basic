@@ -12,6 +12,9 @@ import Param2 from "./pages/Param2";
 import Param3 from "./pages/Param3";
 import LinkSendData from "./pages/LinkSendData";
 import LinkReceiveData from "./pages/LinkReceiveData";
+import Main from "./pages/Main";
+import Articles from "./pages/article/Articles";
+import Article from "./pages/article/Article";
 
 function App() {
   return (
@@ -23,7 +26,8 @@ function App() {
           <Link to="/input2">Input2</Link> | <Link to="/userList">UserList</Link> | &nbsp;
           <Link to="/movies">Movies</Link> | <Link to="/param/20">Param (Path Variable)</Link> | &nbsp;
           <Link to="/param?q=aa&page=10">Param (Query String)</Link> | <Link to={{pathname: "/param", search: "?q=bb&page=20"}}>Param (Query String)</Link> | &nbsp;
-          <Link to="/param2?q=aa&page=1">Param (Query String)</Link> | <Link to="/linkSendData">Link Send Data</Link>
+          <Link to="/param2?q=aa&page=1">Param (Query String)</Link> | <Link to="/linkSendData">Link Send Data</Link> | &nbsp;
+          <Link to="/main/article">Article 목록</Link>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -38,6 +42,10 @@ function App() {
           <Route path="/param2" element={<Param3 />} />
           <Route path="/linkSendData" element={<LinkSendData />} />
           <Route path="/linkReceiveData" element={<LinkReceiveData />} />
+          <Route path="/main" element={<Main />}>
+            <Route path="article" element={<Articles />} />
+            <Route path="article/:id" element={<Article />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>
