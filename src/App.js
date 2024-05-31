@@ -22,6 +22,7 @@ import Radio from "./pages/Radio";
 import Select from "./pages/Select";
 import InputFile from "./pages/InputFile";
 import ReactSelect from "./pages/ReactSelect";
+import ReactCookie from "./pages/ReactCookie";
 
 function App() {
   return (
@@ -37,7 +38,8 @@ function App() {
           <Link to="/main/article">Article 목록</Link> | <Link to="/focus">Focus</Link> | &nbsp;
           <Link to="/textarea">TextArea</Link> | <Link to="/checkbox">CheckBox</Link> | &nbsp;
           <Link to="/radio">Radio</Link> | <Link to="/select">Select</Link> | &nbsp;
-          <Link to="/inputFile">InputFile</Link> | <Link to="/react-select">react-select</Link>
+          <Link to="/inputFile">InputFile</Link> | <Link to="/react-select">react-select</Link> | &nbsp;
+          <Link to="/react-cookie">react-cookie</Link>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -63,6 +65,7 @@ function App() {
           <Route path="/select" element={<Select />} />
           <Route path="/inputFile" element={<InputFile />} />
           <Route path="/react-select" element={<ReactSelect />} />
+          <Route path="/react-cookie" element={<ReactCookie />} />
         </Routes>
       </BrowserRouter>
     </div>
