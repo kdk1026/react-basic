@@ -29,7 +29,7 @@ function InputFile() {
                 <p>MimeType : {fileInfo.type}</p>
             </div>
             <div>
-                <img src={imgUrl} />
+                <img src={imgUrl} alt="미리보기 이미지" />
             </div>
         </div>
     )
