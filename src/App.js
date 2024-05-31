@@ -15,6 +15,7 @@ import LinkReceiveData from "./pages/LinkReceiveData";
 import Main from "./pages/Main";
 import Articles from "./pages/article/Articles";
 import Article from "./pages/article/Article";
+import Focus from "./pages/Focus";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
           <Link to="/movies">Movies</Link> | <Link to="/param/20">Param (Path Variable)</Link> | &nbsp;
           <Link to="/param?q=aa&page=10">Param (Query String)</Link> | <Link to={{pathname: "/param", search: "?q=bb&page=20"}}>Param (Query String)</Link> | &nbsp;
           <Link to="/param2?q=aa&page=1">Param (Query String)</Link> | <Link to="/linkSendData">Link Send Data</Link> | &nbsp;
-          <Link to="/main/article">Article 목록</Link>
+          <Link to="/main/article">Article 목록</Link> | <Link to="/focus">Focus</Link>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -46,6 +47,7 @@ function App() {
             <Route path="article" element={<Articles />} />
             <Route path="article/:id" element={<Article />} />
           </Route>
+          <Route path="/focus" element={<Focus />} />
         </Routes>
       </BrowserRouter>
     </div>
