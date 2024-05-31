@@ -16,6 +16,11 @@ import Main from "./pages/Main";
 import Articles from "./pages/article/Articles";
 import Article from "./pages/article/Article";
 import Focus from "./pages/Focus";
+import TextArea from "./pages/TextArea";
+import CheckBox from "./pages/CheckBox";
+import Radio from "./pages/Radio";
+import Select from "./pages/Select";
+import InputFile from "./pages/InputFile";
 
 function App() {
   return (
@@ -28,7 +33,10 @@ function App() {
           <Link to="/movies">Movies</Link> | <Link to="/param/20">Param (Path Variable)</Link> | &nbsp;
           <Link to="/param?q=aa&page=10">Param (Query String)</Link> | <Link to={{pathname: "/param", search: "?q=bb&page=20"}}>Param (Query String)</Link> | &nbsp;
           <Link to="/param2?q=aa&page=1">Param (Query String)</Link> | <Link to="/linkSendData">Link Send Data</Link> | &nbsp;
-          <Link to="/main/article">Article 목록</Link> | <Link to="/focus">Focus</Link>
+          <Link to="/main/article">Article 목록</Link> | <Link to="/focus">Focus</Link> | &nbsp;
+          <Link to="/textarea">TextArea</Link> | <Link to="/checkbox">CheckBox</Link> | &nbsp;
+          <Link to="/radio">Radio</Link> | <Link to="/select">Select</Link> | &nbsp;
+          <Link to="/inputFile">InputFile</Link>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -48,6 +56,11 @@ function App() {
             <Route path="article/:id" element={<Article />} />
           </Route>
           <Route path="/focus" element={<Focus />} />
+          <Route path="/textarea" element={<TextArea />} />
+          <Route path="/checkbox" element={<CheckBox />} />
+          <Route path="/radio" element={<Radio />} />
+          <Route path="/select" element={<Select />} />
+          <Route path="/inputFile" element={<InputFile />} />
         </Routes>
       </BrowserRouter>
     </div>
