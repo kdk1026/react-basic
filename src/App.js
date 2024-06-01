@@ -25,6 +25,7 @@ import ReactSelect from "./pages/ReactSelect";
 import ReactCookie from "./pages/ReactCookie";
 import RouterHistory from "./pages/RouterHistory";
 import RouterHistoryMove from "./pages/RouterHistoryMove";
+import FileDownload from "./pages/FileDownload";
 
 function App() {
   return (
@@ -41,8 +42,8 @@ function App() {
           <Link to="/textarea">TextArea</Link> | <Link to="/checkbox">CheckBox</Link> | &nbsp;
           <Link to="/radio">Radio</Link> | <Link to="/select">Select</Link> | &nbsp;
           <Link to="/inputFile">InputFile</Link> | <Link to="/react-select">react-select</Link> | &nbsp;
-          <Link to="/react-cookie">react-cookie</Link> | &nbsp;
-          <Link to="/routerHistory">RouterHistory</Link>
+          <Link to="/react-cookie">react-cookie</Link> | <Link to="/routerHistory">RouterHistory</Link> | &nbsp;
+          <Link to="/fileDownload">파일 다운로드</Link>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -71,6 +72,7 @@ function App() {
           <Route path="/react-cookie" element={<ReactCookie />} />
           <Route path="/routerHistory" element={<RouterHistory />} />
           <Route path="/routerHistoryMove" element={<RouterHistoryMove />} />
+          <Route path="/fileDownload" element={<FileDownload />} />
         </Routes>
       </BrowserRouter>
     </div>
