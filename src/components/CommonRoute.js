@@ -27,6 +27,7 @@ import RouterHistory from "../pages/RouterHistory";
 import RouterHistoryMove from "../pages/RouterHistoryMove";
 import FileDownload from "../pages/FileDownload";
 import FileUpload from "../pages/FileUpload";
+import Parent from "../pages/Parent";
 
 function CommonRoute() {
     return (
@@ -60,6 +61,7 @@ function CommonRoute() {
           <Route path="/routerHistoryMove" element={<RouterHistoryMove />} />
           <Route path="/fileDownload" element={<FileDownload />} />
           <Route path="/fileUpload" element={<FileUpload />} />
+          <Route path="/parent" element={<Parent />} />
         </Routes>
         </>
     )
