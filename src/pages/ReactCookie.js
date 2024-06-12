@@ -13,7 +13,7 @@ function ReactCookie() {
         const nowDate = new Date(Date.now());
         nowDate.setDate(+7);
 
-        setCookie("test", "testValue", {expires : nowDate, httpOnly: false});
+        setCookie("test", "testValue", {expires : nowDate});
     };
 
     const getCookieReact = () => {
