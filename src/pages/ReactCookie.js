@@ -7,7 +7,7 @@ import { useCookies } from "react-cookie";
 function ReactCookie() {
     const [testCookie, setTestCookie] = useState("");
 
-    const [cookies, setCookie, removeCookie] = useCookies(['test']);
+    const [cookies, setCookie, removeCookie] = useCookies();
 
     const setCookieReact = () => {
         const nowDate = new Date(Date.now());
