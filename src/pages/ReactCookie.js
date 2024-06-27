@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useCookies } from "react-cookie";
 
-// 됐었는데...안되네...
-//import { cookieUtil } from "../utils/cookie";
+// import * as cookieUtil from "../utils/cookie";
 
 function ReactCookie() {
     const [testCookie, setTestCookie] = useState("");
@@ -10,20 +9,22 @@ function ReactCookie() {
     const [cookies, setCookie, removeCookie] = useCookies();
 
     const setCookieReact = () => {
-        const nowDate = new Date(Date.now());
-        nowDate.setDate(+7);
+        const afterDate = new Date();
+        afterDate.setDate(afterDate.getDate() + 7);
 
-        setCookie("test", "testValue", {expires : nowDate});
+        // cookieUtil.setCookie("test", "testValue", {expires : afterDate});
+        setCookie("test", "testValue", {expires : afterDate});
     };
 
     const getCookieReact = () => {
-        // 콘솔로 찍어봤으나 새로고침 하면 사라짐...개발자 도구에도 안보임...
+        // const cookieVal = cookieUtil.getCookie("test");
         const cookieVal = cookies.test;
         setTestCookie(cookieVal);
     };
 
     const removeCookieReact = () => {
-        removeCookie("test")
+        // cookieUtil.removeCookie("test");
+        removeCookie("test");
     };
 
     return (
