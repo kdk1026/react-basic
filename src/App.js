@@ -21,7 +21,7 @@ function App() {
             <Link to="/inputFile">InputFile</Link> | <Link to="/react-select">react-select</Link> | &nbsp;
             <Link to="/react-cookie">react-cookie</Link> | <Link to="/routerHistory">RouterHistory</Link> | &nbsp;
             <Link to="/fileDownload">파일 다운로드</Link> | <Link to="/fileUpload">파일 업로드</Link> | &nbsp;
-            <Link to="/parent">자식'{'->'}'부모</Link>
+            <Link to="/parent">자식'{'->'}'부모</Link> | <Link to="/html">HTML 출력</Link>
           </nav>
           <CommonRoute />
         </BrowserRouter>
