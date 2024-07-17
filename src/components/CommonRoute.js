@@ -29,6 +29,7 @@ import FileDownload from "../pages/FileDownload";
 import FileUpload from "../pages/FileUpload";
 import Parent from "../pages/Parent";
 import Html from "../pages/Html";
+import RouterQuery from "../pages/RouterQuery";
 
 function CommonRoute() {
     return (
@@ -64,6 +65,7 @@ function CommonRoute() {
           <Route path="/fileUpload" element={<FileUpload />} />
           <Route path="/parent" element={<Parent />} />
           <Route path="/html" element={<Html />} />
+          <Route path="/routerQuery" element={<RouterQuery />} />
         </Routes>
         </>
     )
