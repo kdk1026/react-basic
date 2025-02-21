@@ -16,14 +16,14 @@ export const removeCookie = (name, options) => {
 }
 
 export const setArrayInCookie = (name, array, options) => {
-    if ( !isEmptyArray(array) ) {
+    if ( Array.isArray(array) && array.length > 0 ) {
         //JSON.stringify(array) 자동으로 해줌
         setCookie(name, array, {...options});
     }
 };
 
 export const setObjectInCookie = (name, object, options) => {
-    if ( !isEmptyObject(object) ) {
+    if ( Object.keys(object).length > 0 ) {
         //JSON.stringify(object) 자동으로 해줌
         setCookie(name, object, {...options});
     }
