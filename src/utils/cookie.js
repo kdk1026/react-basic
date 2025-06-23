@@ -2,8 +2,13 @@ import { Cookies } from "react-cookie";
 
 const cookies = new Cookies();
 
-export const setCookie = (name, value, options) => {
-    return cookies.set(name, value, {...options});
+export const setCookie = (name, value, isLocal, options) => {
+    const shouldUseSecure = !isLocal;
+    const updatedOptions = { 
+        ...options, 
+        ...(shouldUseSecure && { secure: true }) 
+    };
+    return cookies.set(name, value, updatedOptions);
 };
 
 export const getCookie = (name) => {
@@ -11,20 +16,35 @@ export const getCookie = (name) => {
     return cookies.get(name);
 }
 
-export const removeCookie = (name, options) => {
-    return cookies.remove(name, {...options});
+export const removeCookie = (name, isLocal, options) => {
+    const shouldUseSecure = !isLocal;
+    const updatedOptions = { 
+        ...options, 
+        ...(shouldUseSecure && { secure: true }) 
+    };
+    return cookies.remove(name, updatedOptions);
 }
 
-export const setArrayInCookie = (name, array, options) => {
+export const setArrayInCookie = (name, array, isLocal, options) => {
     if ( Array.isArray(array) && array.length > 0 ) {
+        const shouldUseSecure = !isLocal;
+        const updatedOptions = { 
+            ...options, 
+            ...(shouldUseSecure && { secure: true }) 
+        };
         //JSON.stringify(array) 자동으로 해줌
-        setCookie(name, array, {...options});
+        setCookie(name, array, updatedOptions);
     }
 };
 
-export const setObjectInCookie = (name, object, options) => {
+export const setObjectInCookie = (name, object, isLocal, options) => {
     if ( Object.keys(object).length > 0 ) {
+        const shouldUseSecure = !isLocal;
+        const updatedOptions = { 
+            ...options, 
+            ...(shouldUseSecure && { secure: true }) 
+        };
         //JSON.stringify(object) 자동으로 해줌
-        setCookie(name, object, {...options});
+        setCookie(name, object, updatedOptions);
     }
 }
